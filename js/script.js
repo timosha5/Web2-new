@@ -1,5 +1,7 @@
 $(function() {
 
+
+/* Fixed header*/
 let header = $("#header"); 
 let intro = $("#intro"); 
 let introH = intro.innerHeight();
@@ -20,5 +22,23 @@ $(window).on("scroll load resize", function() {
      }
 
     });
+
+/*Smooth scroll*/
+
+$("[data-scroll]").on("click", function(event){
+	event.preventDefault();
+
+	let elementId = $(this).data('scroll');
+	let elementOffset = $(elementId).offset().top;
+
+
+	$("html, body").animate({
+		scrollTop: elementOffset
+
+	});
+
+});
+
+
 
 });
