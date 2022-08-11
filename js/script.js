@@ -53,7 +53,7 @@ $("[data-scroll]").on("click", function(event){
 /* navToggle */
 
 
-navToggle.on(click, function(event) {
+navToggle.on("click", function(event) {
 	event.preventDefault();
 	nav.toggleClass("show");
 
@@ -61,15 +61,15 @@ navToggle.on(click, function(event) {
 
 /* Reviews*/
 
-let slider = $("reviewsSlider");
+let slider = $("#reviewsSlider");
 
 slider.slick({
   infinite: true,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
   fade: true,
   arrows: false,
-  dors: true
+  dots: true
 });
 
 });
